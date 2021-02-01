@@ -1,0 +1,6 @@
+<div class="row">
+  <label>Ingrese Nombre</label>
+  <input type="text"  #nombre />
+  <input type="button" (click)="filtrar(nombre.value)" value="Buscar" class="btn btn-primary" />
+  <input type="button" (click)="limpiar(nombre)" value="Limpiar" class="btn btn-warning"/>
+</div>

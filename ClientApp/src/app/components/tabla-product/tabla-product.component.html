@@ -1,0 +1,17 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let head of cabezeras">{{head}}</th>   
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <th scope="row">{{p.idProducto}}</th>
+      <td>{{p.nombre}}</td>
+      <td>{{p.precio}}</td>
+      <td>{{p.stock}}</td>
+      <td>{{p.nombreCategoria}}</td>
+    </tr>
+  </tbody>
+</table>
