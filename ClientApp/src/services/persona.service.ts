@@ -22,7 +22,7 @@ export class PersonaService {
   }
 
   public getPersonaFiltro(nombreCompleto: string) {
-    return this.http.get(this.urlBase + "api/persona/filtrarPersona/" + nombreCompleto).pipe(map((res: any[]) => {
+    return this.http.get(this.urlBase + "api/persona/filtrar-persona/" + nombreCompleto).pipe(map((res: any[]) => {
       return res;
     }));
   }

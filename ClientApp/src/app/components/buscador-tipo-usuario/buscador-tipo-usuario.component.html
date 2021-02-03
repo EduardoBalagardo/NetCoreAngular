@@ -1,0 +1,5 @@
+<label>Ingrese Tipo Usuario</label>
+<select #tipoUsuario (change)="filtrarUsuario(tipoUsuario)">
+  <option value="">--Seleccione--</option>
+  <option [value]="tipoUsuario.iidtipousuario" *ngFor="let tipoUsuario of tipoUsuarios" >{{tipoUsuario.nombre}}</option>
+</select>

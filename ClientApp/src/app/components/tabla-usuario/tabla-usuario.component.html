@@ -1,0 +1,16 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let c of cabeceras">{{c}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td *ngFor="let u of usuarios">
+        <td>{{u.iidusuario}}</td>
+        <td>{{u.nombreusuario}}</td>
+        <td>{{u.nombrePersona}}</td>
+        <td>{{u.nombreTipoUsuario}}</td>     
+    </tr>
+  </tbody>
+</table>

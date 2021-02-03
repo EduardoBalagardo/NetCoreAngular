@@ -38,9 +38,10 @@ namespace NetCoreAngular.Controllers
             }
         }
 
-        [HttpDelete]
-        [Route("api/persona/filtrarPersona/{nombreCompleto?}")]
-        public IEnumerable<PersonaCLS> filtrarPersona(string nombreCompleto = "") {
+        [HttpGet]
+        [Route("api/persona/filtrar-persona/{nombreCompleto?}")]
+        public IEnumerable<PersonaCLS> filtrarPersona(string nombreCompleto)
+        {
             List<PersonaCLS> listaPersona;
             using(BDRestauranteContext db = new BDRestauranteContext()){
                 if ( nombreCompleto == "" ) {
@@ -52,8 +53,9 @@ namespace NetCoreAngular.Controllers
                                                          nombreCompleto = persona.Nombre + " " + persona.Appaterno + " " + persona.Apmaterno,
                                                          nombre = persona.Nombre,
                                                          apaterno = persona.Apmaterno,
-                                                         amaterno = persona.Appaterno
-
+                                                         amaterno = persona.Appaterno,
+                                                         telefono = persona.Telefono,
+                                                         correo   = persona.Correo
                                                      }).ToList();
                     return listaPersona;
                 } else {
@@ -65,16 +67,14 @@ namespace NetCoreAngular.Controllers
                                         iidpersona = persona.Iidpersona,
                                         nombreCompleto = persona.Nombre + " " + persona.Appaterno + " " + persona.Apmaterno,
                                         nombre = persona.Nombre,
-                                        apaterno = persona.Apmaterno,
-                                        amaterno = persona.Appaterno
+                                        apaterno = persona.Apmaterno,                                        
+                                        amaterno = persona.Appaterno,
+                                        telefono = persona.Telefono,
+                                        correo = persona.Correo
                                     }).ToList();
                     return listaPersona;
                 }
             }
-
-
-
         }
-
     }
 }

@@ -17,10 +17,10 @@ export class FiltradoProductoNombreComponent implements OnInit {
   
   ngOnInit() {
   }
+
   public productos: any;
 
-  public filtrarDatos(nombre) {
-    console.log(nombre);
+  public filtrarDatos(nombre) {    
     if (nombre.value == "") {
       this.service.getProduct().subscribe(res => {
         this.productos = res;        

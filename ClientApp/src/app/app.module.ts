@@ -19,10 +19,14 @@ import { FiltradoProductoCategoriaComponent } from './components/filtrado-produc
 import { ProductoServiceService } from '../services/producto-service.service';
 import { CategoriaService } from '../services/categoria.service';
 import { PersonaService } from '../services/persona.service';
+import { UsuarioServiceService } from '../services/usuario-service.service';
 
 import { TablaPersonaComponent } from './components/tabla-persona/tabla-persona.component';
 import { BuscadorPersonaNombrecompletoComponent } from './components/buscador-persona-nombrecompleto/buscador-persona-nombrecompleto.component';
 import { FiltradoPersonaNombrecompletoComponent } from './components/filtrado-persona-nombrecompleto/filtrado-persona-nombrecompleto.component';
+import { BuscadorTipoUsuarioComponent } from './components/buscador-tipo-usuario/buscador-tipo-usuario.component';
+import { TablaUsuarioComponent } from './components/tabla-usuario/tabla-usuario.component';
+import { FiltradoUsuarioComponent } from './components/filtrado-usuario/filtrado-usuario.component';
 
 
 
@@ -42,6 +46,9 @@ import { FiltradoPersonaNombrecompletoComponent } from './components/filtrado-pe
     TablaPersonaComponent,
     BuscadorPersonaNombrecompletoComponent,
     FiltradoPersonaNombrecompletoComponent,
+    BuscadorTipoUsuarioComponent,
+    TablaUsuarioComponent,
+    FiltradoUsuarioComponent,
     
 
   ],
@@ -56,10 +63,11 @@ import { FiltradoPersonaNombrecompletoComponent } from './components/filtrado-pe
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'listado-producto', component: TablaProductComponent },
       { path: 'filtro-categoria', component: FiltradoProductoCategoriaComponent },
-      { path: 'filtro-persona', component: FiltradoPersonaNombrecompletoComponent }
+      { path: 'filtro-persona', component: FiltradoPersonaNombrecompletoComponent },
+      { path: 'listado-usuarios', component: FiltradoUsuarioComponent }
     ])
   ],
-  providers: [ProductoServiceService, CategoriaService, PersonaService],
+  providers: [ProductoServiceService, CategoriaService, PersonaService, UsuarioServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,8 +18,7 @@ export class BuscadorProductoCategoriaComponent implements OnInit {
 
   ngOnInit() {
     this.catService.getCategoria().subscribe(res => {
-      this.categorias = res;
-      console.log(this.categorias);
+      this.categorias = res;      
     })
   }
 

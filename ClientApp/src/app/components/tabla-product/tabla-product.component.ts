@@ -12,6 +12,7 @@ export class TablaProductComponent implements OnInit {
 
   public cabezeras:string[] = ["idProducto", "Nombre" , "Precio", "Stock", "Categoria"]
   constructor(public service: ProductoServiceService) { }
+
   ngOnInit() {
     this.service.getProduct().subscribe(res => {
       this.productos = res;    
